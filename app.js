@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 8080;
+const mongoose = require('mongoose');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
