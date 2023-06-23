@@ -164,6 +164,8 @@ footer{
     margin-right: auto;
     border-radius: 20px;
     height: 200px;
+    position: relative;
+    transform: translate(0,-200%);
 }
 input[type ="text"]{
     border-radius: 10px;
@@ -183,3 +185,6 @@ input[type ="text"]{
     border: none;
     float: right;
 }
+.animate {
+    transform: translate(0,-200%) scale(1);
+  }
