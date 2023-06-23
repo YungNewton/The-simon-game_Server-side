@@ -164,7 +164,6 @@ footer{
     margin-right: auto;
     border-radius: 20px;
     height: 200px;
-    z-index: 200;
 }
 input[type ="text"]{
     border-radius: 10px;
@@ -178,4 +177,9 @@ input[type ="text"]{
     border-radius: 10px;
     margin-right: auto;
     margin-left: auto;
+}
+.close{
+    position: relative;
+    border: none;
+    float: right;
 }
