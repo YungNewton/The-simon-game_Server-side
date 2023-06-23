@@ -3,7 +3,17 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 8080;
 const mongoose = require('mongoose');
-
+let password = encodeURIComponent("Dbeastinme1#");
+const dbUri =`mongodb+srv://Dbeast:${password}@clustersimon.y8amiow.mongodb.net/?retryWrites=true&w=majority`
+async function connect(){
+    try{
+        await mongoose.connect(dbUri)
+        console.log('connected to database succesfully')
+    }catch(error){
+        console.log(`Error -> ${error}`)
+    }
+}
+connect();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
