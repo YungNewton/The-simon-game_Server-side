@@ -45,13 +45,14 @@
 </div>  
 <main class="pop">
 <form>
-  <h1>Please Create Username</h1>
-  <div >
-    <input type="text"placeholder="Anonymous">
+  <h1 class="h3 mb-3 fw-normal">Please Create Username</h1>
+  <div class="form-floating">
+    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
     <label for="floatingInput">Username</label>
   </div>
-  <button type="submit">Create User</button>
+  <div class="dropdown">
+    <button class="dropbtn create" type="submit">Create User</button>
+  </div>
 </form>
-</main>
 </div>
 <%- include('footer'); -%>
