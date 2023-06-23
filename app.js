@@ -14,6 +14,11 @@ async function connect(){
     }
 }
 connect();
+const highscoresSchema = new mongoose.Schema({
+    playerName: String,
+    playerScore: Number
+})
+const Score = mongoose.model("scores", highscoresSchema)
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
