@@ -155,3 +155,13 @@ footer{
     padding: 15px;
     
 }
+.pop{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    height: 200px;
+}
