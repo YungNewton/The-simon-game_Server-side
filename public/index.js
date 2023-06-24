@@ -5,10 +5,6 @@ var sound = new Audio('green.mp3');
 var audio = new Audio('red.mp3');
 var sound3 = new Audio('yellow.mp3');
 var sound4 = new Audio('blue.mp3');
-$("a[href='gameplay']").on("click", (event)=>{
-    $(".pop").toggleClass('animate')
-    $('.pop').css({"visibility": "visible"});
-})
 $(".close").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
 })

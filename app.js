@@ -14,11 +14,15 @@ async function connect(){
     }
 }
 connect();
+const userShcema = new mongoose.Schema({
+    userName: String
+})
 const highscoresSchema = new mongoose.Schema({
-    playerName: String,
+    playerName: userShcema,
     playerScore: Number
 })
 const Score = mongoose.model("scores", highscoresSchema)
+const User = mongoose.model('users',userShcema)
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
