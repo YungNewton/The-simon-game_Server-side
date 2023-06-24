@@ -33,6 +33,12 @@ app.get('/gameplay',(req, res)=>{
     res.render('game_play.ejs');
 })
 
+app.post('/user', (req, res)=>{
+    user = req.body.user_name
+    res.redirect('/')
+    console.log(user)
+})
+
 app.listen(port,()=>{
     console.log('server running on port '+port);
 })
