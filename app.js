@@ -21,8 +21,12 @@ const highscoresSchema = new mongoose.Schema({
     playerName: userShcema,
     playerScore: Number
 })
-const Score = mongoose.model("scores", highscoresSchema)
-const User = mongoose.model('users',userShcema)
+const Score = mongoose.model("Scores", highscoresSchema)
+const User = mongoose.model('Users',userShcema)
+const admin = new User({
+    userName: "Newton"
+})
+admin.save()
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -32,13 +36,21 @@ app.get('/',(req, res)=>{
 app.get('/gameplay',(req, res)=>{
     res.render('game_play.ejs');
 })
-
 app.post('/user', (req, res)=>{
     user = req.body.user_name
+    if(User.find((err, users)=>{
+        if(err){
+            console.log(err)
+        }else{
+            users
+        }
+    }))
     res.redirect('/')
     console.log(user)
 })
-
+app.get('/cfaaa5ce-60d2-4bcc-b68d-166e8d94ad01.html',(req, res)=>{
+    res.redirect('/')
+})
 app.listen(port,()=>{
     console.log('server running on port '+port);
 })

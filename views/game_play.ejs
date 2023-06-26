@@ -37,12 +37,15 @@
   <form action = '/user' method="post">
     <h1 class="h3 mb-3 fw-normal">Please Create User to continue</h1>
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="anonymous" name = "user_name">
-      <label for="floatingInput">Username</label>
+        <input name ="user_name" type="firstName" class="form-control" id="floatingPassword" placeholder="Password">
+        <label style ="font-family: Georgia, 'Times New Roman', Times, serif;" for="floatingPassword">Username</label>
     </div>
     <div class="dropdown">
       <button class="dropbtn create" type="submit">Create User</button>
     </div>
+    <div class="dropdown">
+        <button class="dropbtn create" type="submit">Login user</button>
+      </div>
   </form>
 </main>
 <%- include('footer'); -%>
