@@ -49,7 +49,7 @@ app.post('/user', (req, res)=>{
     console.log(user)
 })
 app.get('/cfaaa5ce-60d2-4bcc-b68d-166e8d94ad01.html',(req, res)=>{
-    res.redirect('/')
+    res.render('index');
 })
 app.listen(port,()=>{
     console.log('server running on port '+port);
