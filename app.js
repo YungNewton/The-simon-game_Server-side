@@ -26,7 +26,16 @@ const User = mongoose.model('Users',userShcema)
 const admin = new User({
     userName: "Newton"
 })
-// admin.save()
+// if(User.find((err, admin)=>{
+//     if(err){
+//         console.log(err)
+//     }else{
+//         users
+//     }
+// })){
+//     admin.save()
+// }
+admin.save()
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -38,13 +47,6 @@ app.get('/gameplay',(req, res)=>{
 })
 app.post('/user', (req, res)=>{
     user = req.body.user_name
-    if(User.find((err, users)=>{
-        if(err){
-            console.log(err)
-        }else{
-            users
-        }
-    }))
     res.redirect('/')
     console.log(user)
 })
