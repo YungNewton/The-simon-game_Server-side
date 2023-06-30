@@ -26,7 +26,7 @@ const User = mongoose.model('Users',userShcema)
 const admin = new User({
     userName: "Newton"
 })
-admin.save()
+// admin.save()
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
