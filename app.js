@@ -39,22 +39,26 @@ app.get('/gameplay',(req, res)=>{
 })
 app.post('/user', (req, res)=>{
     let newUser = new User({
-        Email: req.body.userMail,
-        userName: req.body.user_name
+        Email: req.body.user_name,
+        userName: req.body.userMail
     })
-    User.find({Email: req.body.userMail})
-    .then(function (found) {
-        if(found==""){
-            res.send(`<h1>User ${newUser.Email} registered</h1>`)
-            newUser.save()
-        }else{
-            res.write(`<h1>Welcome ${found}</h1>`)
-            console.log(found);
-        }
-    })
-    .catch(function (err) {
-        console.log(err);
-    });
+    if(newUser.Email==="" || newUser.userName===""){
+        res.send(`<h1>Empty fields</h1>`)
+    }else{
+        User.find({Email: req.body.user_name})
+        .then(function (found) {
+            if(found==""){
+                res.send(`<h1>User ${newUser.Email} registered</h1>`)
+                newUser.save()
+            }else{
+                res.write(`<h1>Welcome ${found}</h1>`)
+                console.log(found);
+            }
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+    }
 })
 app.post('/login',(req, res)=>{
     res.render('login')
