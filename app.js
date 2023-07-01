@@ -45,15 +45,29 @@ app.get('/gameplay',(req, res)=>{
     res.render('game_play.ejs');
 })
 app.post('/user', (req, res)=>{
-    user = req.body.user_name
-    res.redirect('/')
-    console.log(user)
+    let newUser = new User({
+        Email: req.body.userMail,
+        userName: req.body.user_name,
+        userPassword: req.body.userPass
+
+    })
+    User.findOne({Email: req.body.userMail}.then(foundMail=>{
+        if(err){
+            console.log(err)
+        }else{
+            res.write(`<h1>Welcome ${foundMail}</h1>`)
+        }
+    }))
+    res.send(`<h1>Welcome ${newUser.userName}</h1>`)
 })
 app.post('/login',(req, res)=>{
     res.render('login')
 })
 app.post('/userLogin',(req, res)=>{
     res.send("<h1>Logging In</h1>");
+})
+app.post("/back",(req, res)=>{
+    res.render('game_play.ejs');
 })
 app.listen(port,()=>{
     console.log('server running on port '+port);
