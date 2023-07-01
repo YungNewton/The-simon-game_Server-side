@@ -28,13 +28,6 @@ const User = mongoose.model('Users',userShcema)
 const admin = new User({
     userName: "Newton"
 })
-
-// if(User.find(admin).exec){
-//     console.log(`${admin.userName} already in database`)
-// }else{
-//     admin.save();
-//     console.log(`${admin.userName} added to database`)
-// }
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -47,18 +40,21 @@ app.get('/gameplay',(req, res)=>{
 app.post('/user', (req, res)=>{
     let newUser = new User({
         Email: req.body.userMail,
-        userName: req.body.user_name,
-        userPassword: req.body.userPass
-
+        userName: req.body.user_name
     })
-    User.findOne({Email: req.body.userMail}.then(foundMail=>{
-        if(err){
-            console.log(err)
+    User.find({Email: req.body.userMail})
+    .then(function (found) {
+        if(found==""){
+            res.send(`<h1>User ${newUser.Email} registered</h1>`)
+            newUser.save()
         }else{
-            res.write(`<h1>Welcome ${foundMail}</h1>`)
+            res.write(`<h1>Welcome ${found}</h1>`)
+            console.log(found);
         }
-    }))
-    res.send(`<h1>Welcome ${newUser.userName}</h1>`)
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
 })
 app.post('/login',(req, res)=>{
     res.render('login')
