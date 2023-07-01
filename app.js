@@ -51,8 +51,7 @@ app.post('/user', (req, res)=>{
                 res.send(`<h1>User ${newUser.Email} registered</h1>`)
                 newUser.save()
             }else{
-                res.write(`<h1>Welcome ${found}</h1>`)
-                console.log(found);
+                res.write(`<h1>Welcome ${found[0].userName}</h1>`)
             }
         })
         .catch(function (err) {
@@ -60,14 +59,23 @@ app.post('/user', (req, res)=>{
         });
     }
 })
-app.post('/login',(req, res)=>{
+app.get('/login',(req, res)=>{
     res.render('login')
 })
 app.post('/userLogin',(req, res)=>{
-    res.send("<h1>Logging In</h1>");
-})
-app.post("/back",(req, res)=>{
-    res.render('game_play.ejs');
+    Email = req.body.user_name
+    User.find({Email: req.body.user_name})
+    .then(function (found) {
+        if(found==""){
+            res.send(`<h1>User ${found[0].Email} does not exist, Please login</h1>`)
+            newUser.save()
+        }else{
+            res.send(`<h1>Welcome ${found[0].userName}</h1>`)
+        }
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
 })
 app.listen(port,()=>{
     console.log('server running on port '+port);
