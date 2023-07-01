@@ -15,6 +15,7 @@ async function connect(){
 }
 connect();
 const userShcema = new mongoose.Schema({
+    Email: String,
     userName: String,
     userPassword: String
 })
@@ -27,14 +28,13 @@ const User = mongoose.model('Users',userShcema)
 const admin = new User({
     userName: "Newton"
 })
-User.deleteMany({userName: "Newton"})
-if(User.find(admin)){
-    console.log(`${admin.userName} already in database`)
-    console.log(admin.userName)
-}else{
-    admin.save();
-    console.log(`${admin.userName} added to database`)
-}
+
+// if(User.find(admin).exec){
+//     console.log(`${admin.userName} already in database`)
+// }else{
+//     admin.save();
+//     console.log(`${admin.userName} added to database`)
+// }
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
