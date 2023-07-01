@@ -34,7 +34,7 @@
         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
       </svg>
     </button>
-  <form action = '/user' method="post" >
+  <form action = '/userLogin' method="post" >
     <h1 class="h3 mb-3 fw-normal">Please Create User</h1>
     <div class="form-floating">
         <input name ="user_name" type="firstName" class="form-control" id="floatingPassword" placeholder="Username">
@@ -45,10 +45,7 @@
         <label for="floatingPassword">Password</label>
     </div>  
     <div class="dropdown">
-      <button name= "createUser" class="dropbtn create" type="submit">Create User</button>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn create" formaction="/login" type="submit">Login user</button>
+        <button class="dropbtn create" type="submit">Login</button>
     </div>
   </form>
 </main>

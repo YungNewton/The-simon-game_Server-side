@@ -52,8 +52,8 @@ app.post('/user', (req, res)=>{
 app.post('/login',(req, res)=>{
     res.render('login')
 })
-app.get('/cfaaa5ce-60d2-4bcc-b68d-166e8d94ad01.html',(req, res)=>{
-    res.sendFile(__dirname+'/cfaaa5ce-60d2-4bcc-b68d-166e8d94ad01.html');
+app.post('/userLogin',(req, res)=>{
+    res.send("<h1>Logging In</h1>");
 })
 app.listen(port,()=>{
     console.log('server running on port '+port);
