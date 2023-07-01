@@ -186,6 +186,7 @@ input[type ="text"]{
     border: none;
     float: right;
     background-color: #04AA6D;
+    border-radius: 5px;
 }
 .animate {
     transform: translate(0,-200%) scale(1);
