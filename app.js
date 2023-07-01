@@ -15,7 +15,8 @@ async function connect(){
 }
 connect();
 const userShcema = new mongoose.Schema({
-    userName: String
+    userName: String,
+    userPassword: String
 })
 const highscoresSchema = new mongoose.Schema({
     playerName: userShcema,
@@ -26,10 +27,10 @@ const User = mongoose.model('Users',userShcema)
 const admin = new User({
     userName: "Newton"
 })
+User.deleteMany({userName: "Newton"})
 if(User.find(admin)){
-    fin = User.find(admin)
     console.log(`${admin.userName} already in database`)
-    console.log(fin)
+    console.log(admin.userName)
 }else{
     admin.save();
     console.log(`${admin.userName} added to database`)
