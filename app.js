@@ -49,6 +49,9 @@ app.post('/user', (req, res)=>{
     res.redirect('/')
     console.log(user)
 })
+app.post('/login',(req, res)=>{
+    res.render('login')
+})
 app.get('/cfaaa5ce-60d2-4bcc-b68d-166e8d94ad01.html',(req, res)=>{
     res.sendFile(__dirname+'/cfaaa5ce-60d2-4bcc-b68d-166e8d94ad01.html');
 })
