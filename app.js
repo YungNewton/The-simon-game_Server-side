@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 8080;
 const mongoose = require('mongoose');
+const encrypt = reuire('mongoose-encryption');
 let password = encodeURIComponent("Dbeastinme1#");
 const dbUri =`mongodb+srv://Dbeast:${password}@clustersimon.y8amiow.mongodb.net/?retryWrites=true&w=majority`
 async function connect(){
