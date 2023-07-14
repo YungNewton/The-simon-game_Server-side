@@ -52,7 +52,7 @@ app.post('/user', (req, res)=>{
                 res.send(`<h1>User ${newUser.Email} registered</h1>`)
                 newUser.save()
             }else{
-                res.write(`<h1>Welcome ${found[0].userName}</h1>`)
+                res.write(`<h1>Welcome back ${found[0].userName}</h1>`)
             }
         })
         .catch(function (err) {
@@ -71,7 +71,7 @@ app.post('/userLogin',(req, res)=>{
             res.send(`<h1>User ${found[0].Email} does not exist, Please login</h1>`)
             newUser.save()
         }else{
-            res.send(`<h1>Welcome ${found[0].userName}</h1>`)
+            res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
         }
     })
     .catch(function (err) {
