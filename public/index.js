@@ -8,6 +8,7 @@ var sound4 = new Audio('blue.mp3');
 $(".close").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
     play();
+    $('.highscores').css({"visibility": "visible"})
 })
 function play(){
     $(document).keypress(function(){

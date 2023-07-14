@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    height: 140vh;
+    height: 100vh !important;
     
 }
 .over {
@@ -199,7 +199,8 @@ input[type ="text"]{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     float: right;
-    transform: translate(0, -185%);
+    transform: translate(-50px, -185%);
+    visibility: hidden;
 }
 .highscores td{
     padding: 10px;
