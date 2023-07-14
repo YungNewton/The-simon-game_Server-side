@@ -192,11 +192,14 @@ input[type ="text"]{
     transform: translate(0,-200%) scale(1);
 }
 .highscores{
+    position: relative;
+    display: flex;
+    align-items: right;
     text-align: center;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     float: right;
-    position: relative;
+    transform: translate(0, -185%);
 }
 .highscores td{
     padding: 10px;
@@ -206,6 +209,20 @@ input[type ="text"]{
     text-align: center;
 }
 .highscores th{
+    justify-content: right;
     text-align: center;
     font-size: larger;
 }
+/* .highscores{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    height: 300px;
+    position: relative;
+    transform: translate(0,-200%);
+    margin-top: 200px;
+} */
