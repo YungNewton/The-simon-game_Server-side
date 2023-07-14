@@ -190,4 +190,22 @@ input[type ="text"]{
 }
 .animate {
     transform: translate(0,-200%) scale(1);
-  }
+}
+.highscores{
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: right;
+    position: relative;
+}
+.highscores td{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* border: 1px solid white; */
+    text-align: center;
+}
+.highscores th{
+    text-align: center;
+    font-size: larger;
+}
