@@ -52,7 +52,7 @@ app.post('/user', (req, res)=>{
                 res.send(`<h1>User ${newUser.Email} registered</h1>`)
                 newUser.save()
             }else{
-                res.write(`<h1>Welcome back ${found[0].userName}</h1>`)
+                res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
             }
         })
         .catch(function (err) {
