@@ -7,8 +7,18 @@ var sound3 = new Audio('yellow.mp3');
 var sound4 = new Audio('blue.mp3');
 $(".close").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
-    play();
     $('.highscores').css({"visibility": "visible"})
+    play();
+})
+$(".close").on("click",()=>{
+    $('.pop').css({"visibility": "hidden"});
+    $('.highscores').css({"visibility": "visible"})
+    play();
+})
+$(".loginclose").on("click",()=>{
+    $('.pop').css({"visibility": "hidden"});
+    $('.highscores').css({"visibility": "visible"})
+    play();
 })
 function play(){
     $(document).keypress(function(){

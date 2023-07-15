@@ -188,6 +188,27 @@ input[type ="text"]{
     background-color: #04AA6D;
     border-radius: 5px;
 }
+.loginpop{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    height: 300px;
+    position: relative;
+    transform: translate(0,-200%);
+    margin-top: 200px;
+    visibility: hidden;
+}
+.loginclose{
+    position: relative;
+    border: none;
+    float: right;
+    background-color: #04AA6D;
+    border-radius: 5px;
+}
 .animate {
     transform: translate(0,-200%) scale(1);
 }
