@@ -17,11 +17,11 @@ $(".loginclose").on("click",()=>{
     $('.welcome').css({"visibility": "visible"})
     play();
 })
-// $(".create").on("click",()=>{
-//     $('.pop').css({"visibility": "hidden"});
-//     $('.highscores').css({"visibility": "visible"})
-//     play();
-// })
+$(".create").on("click",()=>{
+    $('.pop').css({"visibility": "hidden"});
+    $('.highscores').css({"visibility": "visible"})
+    play();
+})
 function play(){
     $(document).keypress(function(){
         if(should_play) {

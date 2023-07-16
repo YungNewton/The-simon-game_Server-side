@@ -52,7 +52,7 @@ app.post('/user', (req, res)=>{
                 res.send(`<h1>User ${newUser.Email} registered</h1>`)
                 newUser.save()
             }else{
-                res.render('game_play', { Player: 'Welcome back '+found[0].userName} )
+                res.render('game_logged', { Player: 'Welcome back '+found[0].userName} )
                 //res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
             }
         })

@@ -223,14 +223,14 @@ input[type ="text"]{
     transform: translate(-50px, -242%);
     visibility: hidden;
 }
-.highscores td{
+.highscores td, .highscore td{
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
     /* border: 1px solid white; */
     text-align: center;
 }
-.highscores th{
+.highscores th, .highscore th{
     justify-content: right;
     text-align: center;
     font-size: larger;
@@ -256,4 +256,14 @@ input[type ="text"]{
     transform: translate(-50%, -60%); 
     font-family: Georgia, 'Times New Roman', Times, serif;
     visibility: hidden;
+}
+.highscore{
+    position: relative;
+    display: flex;
+    align-items: right;
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: right;
+    transform: translate(-50px, -85%);
 }
