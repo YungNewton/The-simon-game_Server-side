@@ -33,7 +33,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.get('/',(req, res)=>{
-    res.render('index');
+    res.render('index', {Player: ''});
 })
 app.get('/gameplay',(req, res)=>{
     res.render('game_play', {Player: 'Welcome User Anonymous'});
@@ -52,7 +52,7 @@ app.post('/user', (req, res)=>{
                 res.send(`<h1>User ${newUser.Email} registered</h1>`)
                 newUser.save()
             }else{
-                res.render('game_play', { Player: 'back '+found[0].userName} )
+                res.render('game_play', { Player: 'Welcome back '+found[0].userName} )
                 //res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
             }
         })
@@ -62,7 +62,7 @@ app.post('/user', (req, res)=>{
     }
 })
 app.get('/login',(req, res)=>{
-    res.render('login')
+    res.render('login', {Player: ''})
 })
 app.post('/userLogin',(req, res)=>{
     Email = req.body.user_name
