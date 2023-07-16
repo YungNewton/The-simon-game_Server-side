@@ -63,6 +63,19 @@ app.post('/user', (req, res)=>{
 })
 app.get('/login',(req, res)=>{
     res.render('login', {Player: ''})
+    Email = req.body.user_name
+    User.find({Email: req.body.user_name})
+    .then(function (found) {
+        if(found==""){
+            res.send(`<h1>User ${found[0].Email} does not exist, Please login</h1>`)
+            newUser.save()
+        }else{
+            res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
+        }
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
 })
 app.post('/userLogin',(req, res)=>{
     Email = req.body.user_name
@@ -72,7 +85,7 @@ app.post('/userLogin',(req, res)=>{
             res.send(`<h1>User ${found[0].Email} does not exist, Please login</h1>`)
             newUser.save()
         }else{
-            res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
+            res.render('game_play', { Player: 'Welcome back '+found[0].userName} )
         }
     })
     .catch(function (err) {

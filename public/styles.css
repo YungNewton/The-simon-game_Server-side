@@ -220,7 +220,7 @@ input[type ="text"]{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     float: right;
-    transform: translate(-50px, -185%);
+    transform: translate(-50px, -242%);
     visibility: hidden;
 }
 .highscores td{
@@ -255,4 +255,5 @@ input[type ="text"]{
     left: 50%;
     transform: translate(-50%, -60%); 
     font-family: Georgia, 'Times New Roman', Times, serif;
+    visibility: hidden;
 }

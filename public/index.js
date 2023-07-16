@@ -8,18 +8,20 @@ var sound4 = new Audio('blue.mp3');
 $(".close").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
     $('.highscores').css({"visibility": "visible"})
-    play();
-})
-$(".close").on("click",()=>{
-    $('.pop').css({"visibility": "hidden"});
-    $('.highscores').css({"visibility": "visible"})
+    $('.welcome').css({"visibility": "visible"})
     play();
 })
 $(".loginclose").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
     $('.highscores').css({"visibility": "visible"})
+    $('.welcome').css({"visibility": "visible"})
     play();
 })
+// $(".create").on("click",()=>{
+//     $('.pop').css({"visibility": "hidden"});
+//     $('.highscores').css({"visibility": "visible"})
+//     play();
+// })
 function play(){
     $(document).keypress(function(){
         if(should_play) {
