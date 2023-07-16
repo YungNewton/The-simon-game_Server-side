@@ -85,7 +85,7 @@ app.post('/userLogin',(req, res)=>{
             res.send(`<h1>User ${found[0].Email} does not exist, Please login</h1>`)
             newUser.save()
         }else{
-            res.render('game_play', { Player: 'Welcome back '+found[0].userName} )
+            res.render('game_logged', { Player: 'Welcome back '+found[0].userName} )
         }
     })
     .catch(function (err) {

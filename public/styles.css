@@ -188,7 +188,7 @@ input[type ="text"]{
     background-color: #04AA6D;
     border-radius: 5px;
 }
-.loginpop{
+/* i.loginpop{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: white;
     width: 80%;
@@ -203,12 +203,12 @@ input[type ="text"]{
     visibility: hidden;
 }
 .loginclose{
-    position: relative;
+    positon: relative;
     border: none;
     float: right;
     background-color: #04AA6D;
     border-radius: 5px;
-}
+} */
 .animate {
     transform: translate(0,-200%) scale(1);
 }
