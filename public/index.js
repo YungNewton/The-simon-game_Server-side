@@ -20,6 +20,7 @@ $(".loginclose").on("click",()=>{
 $(".create").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
     $('.highscores').css({"visibility": "visible"})
+    $('.welcome').css({"visibility": "visible"})
     play();
 })
 function play(){
