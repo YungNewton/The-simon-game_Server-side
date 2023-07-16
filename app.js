@@ -36,7 +36,7 @@ app.get('/',(req, res)=>{
     res.render('index');
 })
 app.get('/gameplay',(req, res)=>{
-    res.render('game_play.ejs');
+    res.render('game_play', {Player: 'Welcome User Anonymous'});
 })
 app.post('/user', (req, res)=>{
     let newUser = new User({
@@ -52,7 +52,8 @@ app.post('/user', (req, res)=>{
                 res.send(`<h1>User ${newUser.Email} registered</h1>`)
                 newUser.save()
             }else{
-                res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
+                res.render('game_play', { Player: 'back '+found[0].userName} )
+                //res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
             }
         })
         .catch(function (err) {
