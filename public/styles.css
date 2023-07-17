@@ -248,7 +248,7 @@ input[type ="text"]{
     transform: translate(0,-200%);
     margin-top: 200px;
 } */
-.welcome{
+.welcome, .welcome2{
     color: #d8d6d6;
     position: absolute;
     top: 50%;
@@ -256,6 +256,9 @@ input[type ="text"]{
     transform: translate(-50%, -60%); 
     font-family: Georgia, 'Times New Roman', Times, serif;
     visibility: hidden;
+}
+.welcome2{
+    visibility: visible;
 }
 .highscore{
     position: relative;

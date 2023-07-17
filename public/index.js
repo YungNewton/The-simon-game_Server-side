@@ -17,12 +17,10 @@ $(".loginclose").on("click",()=>{
     $('.welcome').css({"visibility": "visible"})
     play();
 })
-// $(".create").on("click",()=>{
-//     $('.pop').css({"visibility": "hidden"});
-//     $('.highscores').css({"visibility": "visible"})
-//     $('.welcome').css({"visibility": "visible"})
-//     play();
-// })
+$(".create").on("click",()=>{
+    $('.welcome').css({"visibility": "visible"})
+    play();
+})
 $(".fw-normal").on("click",()=>{
     $('.pop').css({"visibility": "hidden"});
     $('.highscores').css({"visibility": "visible"})

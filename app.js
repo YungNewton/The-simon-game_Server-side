@@ -1,4 +1,5 @@
 const express = require('express');
+//const lib = require('/Users/decagon/Simon_game_App/public/index.js');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 8080;
@@ -53,6 +54,9 @@ app.post('/user', (req, res)=>{
                 newUser.save()
             }else{
                 res.render('game_logged', { Player: 'Welcome back '+found[0].userName} )
+                // $('.pop').css({"visibility": "hidden"});
+                // $('.highscores').css({"visibility": "visible"})
+                // $('.welcome').css({"visibility": "visible"})
                 //res.send(`<h1>Welcome back ${found[0].userName}</h1>`)
             }
         })
