@@ -62,7 +62,7 @@ app.post('/user', (req, res)=>{
     }
 })
 app.get('/login',(req, res)=>{
-    res.render('login', {Player: ''})
+    //res.render('login', {Player: ''})
     Email = req.body.user_name
     User.find({Email: req.body.user_name})
     .then(function (found) {

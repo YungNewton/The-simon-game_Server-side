@@ -221,7 +221,7 @@ input[type ="text"]{
     font-family: Georgia, 'Times New Roman', Times, serif;
     float: right;
     transform: translate(-50px, -242%);
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 .highscores td, .highscore td{
     padding: 10px;
